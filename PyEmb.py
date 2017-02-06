@@ -50,6 +50,9 @@ class Point:
     def length(self):
         return math.sqrt(math.pow(self.x, 2.0) + math.pow(self.y, 2.0))
 
+    def distance(self, other):
+        return (self - other).length()
+
     def unit(self):
         return self.mul(1.0 / self.length())
 
